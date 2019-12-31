@@ -4,15 +4,19 @@ function Book(title, author, pages, read) {
     this.pages = pages
     this.read = read
     this.info = function() {
-        if(read)
+        if(read == true)
         {
-            var re = "read"
+            re = "already read"
         }
-        else if(!read)
+        else
         {
-            var re = "not read yet"
+            re = "haven't read yet"
+
         }
-        return (title + "by" + author + ", " + pages + "pages, " + re)
-        
+        return title + " by " + author + ", " + pages + " pages, " + re
     }
 }
+
+const hp = new Book("Harry Potter and the Mules Butt", "JK Balling", 923, true)
+
+console.log(hp.info())
